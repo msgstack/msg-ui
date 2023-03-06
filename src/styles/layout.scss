@@ -1,0 +1,26 @@
+.p-workspace-layout {
+  display: grid;
+  overflow: visible;
+  position: relative;
+  grid-template-columns: 345px auto;
+  grid-template-rows: 44px auto;
+  grid-template-areas: 'p-top_nav p-top_nav' 'p-workspace__sidebar p-workspace__primary_view';
+}
+
+.p-top_nav {
+  min-height: 44px;
+  background-color: #2c3849;
+  grid-area: p-top_nav;
+}
+
+.p-workspace__sidebar {
+  width: 345px;
+  background: var(--p-channel_sidebar__column-bg);
+  grid-area: p-workspace__sidebar;
+}
+
+.p-workspace__primary__view {
+}
+
+.p-workspace__footer {
+}

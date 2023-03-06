@@ -1,9 +1,9 @@
 import React from 'react'
 
-interface WorkspacePrimaryProps {}
+interface PrimaryViewProps {}
 
-const WorkspacePrimary: React.FC<WorkspacePrimaryProps> = (props) => {
-  return <div></div>
+const PrimaryView: React.FC<PrimaryViewProps> = (props) => {
+  return <div className="p-workspace__primary__view"></div>
 }
 
-export default WorkspacePrimary
+export default PrimaryView

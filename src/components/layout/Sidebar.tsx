@@ -1,9 +1,9 @@
 import React from 'react'
 
-interface WorkspaceSidebarProps {}
+interface SidebarProps {}
 
-const WorkspaceSidebar: React.FC<WorkspaceSidebarProps> = (props) => {
+const Sidebar: React.FC<SidebarProps> = (props) => {
   return <div className="p-workspace__sidebar"></div>
 }
 
-export default WorkspaceSidebar
+export default Sidebar

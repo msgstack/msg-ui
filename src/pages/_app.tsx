@@ -2,7 +2,9 @@ import type { AppProps } from 'next/app'
 import App from 'next/app'
 import { Provider } from 'react-redux'
 
-import '@styles/globals.css'
+import '@styles/globals.scss'
+import '@styles/layout.scss'
+
 import { wrapper } from '@store'
 import { fetchSystem } from '@store/system/actions'
 import BaseLayout from '@components/layout/Base'
