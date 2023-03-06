@@ -17,3 +17,7 @@
   row-gap: $row-gap;
   column-gap: $col-gap;
 }
+
+@mixin flexCenter() {
+  @include flexbox($align: center, $justify: center);
+}

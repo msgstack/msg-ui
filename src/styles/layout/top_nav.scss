@@ -30,4 +30,10 @@
 
     @include flexbox($align: center, $justify: flex-end);
   }
+
+  &__button {
+    color: $color-white;
+
+    @include flexCenter();
+  }
 }
