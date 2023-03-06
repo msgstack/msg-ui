@@ -1,4 +1,9 @@
-import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit'
+import {
+  createAction,
+  createSelector,
+  createSlice,
+  PayloadAction,
+} from '@reduxjs/toolkit'
 import { AppState } from '@store'
 import { HYDRATE } from 'next-redux-wrapper'
 
@@ -18,13 +23,13 @@ const systemSlice = createSlice({
       state.data = payload.data
     },
   },
-  extraReducers: {
-    [HYDRATE]: (state, action) => {
+  extraReducers: (builder) => {
+    builder.addCase(createAction(HYDRATE), (state, action: any) => {
       return {
         ...state,
         ...action.payload.system,
       }
-    },
+    })
   },
 })
 

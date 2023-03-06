@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 import '@styles/globals.css'
 import { wrapper } from '@store'
 import { fetchSystem } from '@store/system/actions'
+import BaseLayout from '@components/layout/Base'
 
 interface PageProps {
   pageProps: {
@@ -20,7 +21,9 @@ const NextApp = ({
 
   return (
     <Provider store={store}>
-      <Component {...props.pageProps} />
+      <BaseLayout>
+        <Component {...props.pageProps} />
+      </BaseLayout>
     </Provider>
   )
 }
