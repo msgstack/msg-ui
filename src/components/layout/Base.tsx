@@ -15,11 +15,17 @@ const Base: React.FC<BaseProps> = ({ children }) => {
   const layoutData = useSelector(layoutSliceSelector)
 
   return (
-    <div className="p-workspace-layout">
-      <TopNav />
-      <Sidebar />
-      <PrimaryView />
-      {layoutData.hasFooter && <Footer />}
+    <div className="p-client_container">
+      <div className="p-client">
+        <div className="p-workspace-layout">
+          <TopNav />
+          <Sidebar />
+          <PrimaryView />
+          {layoutData.hasFooter && <Footer />}
+        </div>
+
+        <div className="p-client__banners"></div>
+      </div>
     </div>
   )
 }

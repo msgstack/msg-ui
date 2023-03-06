@@ -1,0 +1,33 @@
+.p-top_nav {
+  background: #2c3849;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  color: $color-white;
+
+  @include flexbox($align: center);
+  width: 100%;
+
+  &__sidebar {
+    flex: 0 1;
+    min-width: 260px;
+    padding-left: 16px;
+    padding-right: 20px;
+
+    @include flexbox($align: center, $justify: flex-end);
+  }
+
+  &__search__container {
+    flex: 2;
+    max-width: none;
+
+    @include flexbox($align: center);
+  }
+
+  &__right {
+    flex: 0 1;
+    min-width: 260px;
+    padding-left: 32px;
+    padding-right: 16px;
+
+    @include flexbox($align: center, $justify: flex-end);
+  }
+}
