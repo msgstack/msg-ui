@@ -1,0 +1,28 @@
+.p-workspace__primary_view_contents {
+  position: relative;
+  grid-area: p-workspace__primary_view_contents;
+
+  @include flexbox($direction: column);
+}
+
+.p-view_header {
+  height: 49px;
+  box-shadow: 0 1px 0 0 rgba(29, 28, 29, 0.13);
+}
+
+.p-file_drag_drop__container {
+  flex: 1;
+  position: relative;
+
+  @include flexbox($direction: column);
+}
+
+.p-workspace__primary_view_body {
+  flex: 1;
+  position: relative;
+}
+
+.p-workspace__primary_view_footer {
+  flex: 0;
+  min-height: 185px;
+}
