@@ -1,4 +1,5 @@
 import VirtualList from '@components/chat/VirtualList'
+import InputContainer from '@components/input/InputContainer'
 import React from 'react'
 
 interface PrimaryViewProps {}
@@ -13,7 +14,11 @@ const PrimaryView: React.FC<PrimaryViewProps> = (props) => {
             <div className="p-workspace__primary_view_body">
               <VirtualList />
             </div>
-            <div className="p-workspace__primary_view_footer"></div>
+            <div className="p-workspace__primary_view_footer">
+              <div className="p-workspace__primary_view_footer_inner">
+                <InputContainer />
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,9 +1,18 @@
-/* Font --------------------- */
+/* Color --------------------- */
 $color-white: #fff !default;
 $color-hover: #f8f8f8 !default;
+$color-foreground: #f8f8f8 !default;
 
 $color-text: #1d1d1c !default;
 $color-text-secondary: #616061 !default;
+
+/* Border --------------------- */
+$border-radius-base: 2px !default;
+$border-radius-medium: 4px !default;
+$border-radius-large: 8px !default;
+$border-radius-extra-large: 12px !default;
+
+$border-color-base: #f8f8f8 !default;
 
 /* Font --------------------- */
 $font-size-extra-large: 20px !default;

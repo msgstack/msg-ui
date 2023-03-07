@@ -44,6 +44,13 @@
   max-height: calc(100vh - 44px);
 }
 
+.p-workspace__primary_view_footer {
+  z-index: 200;
+  position: relative;
+
+  @include flexbox($direction: column, $justify: flex-end);
+}
+
 .p-workspace__footer {
   display: none;
 }

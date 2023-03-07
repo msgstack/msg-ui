@@ -1,0 +1,75 @@
+.p-message_pane_input__container {
+  padding: 0 20px;
+
+  @include flexbox();
+}
+
+.p-message_pane_input__inner {
+  flex: 1;
+}
+
+.p-message_input__input_container {
+  overflow: hidden;
+  border-radius: $border-radius-large;
+  box-shadow: 0 0 0 2px rgba(29, 28, 29, 0.13);
+  border: 1px solid $border-color-base;
+}
+
+.p-message_pane_input_inner_bottom {
+  height: 24px;
+  padding: 0 12px 0 8px;
+
+  @include flexbox($align: center);
+}
+
+/* Composer --------------------- */
+.c-basic_container__body {
+  display: grid;
+  position: relative;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-rows: auto auto minmax(0, 100%) auto auto auto;
+  grid-template-areas:
+    'context context context'
+    'formatting formatting formatting'
+    'input input input'
+    'attachments attachments attachments'
+    'actions actions actions';
+}
+
+.c-wysiwyg_container__context {
+  grid-area: context;
+}
+
+.c-wysiwyg_container__formatting {
+  grid-area: formatting;
+
+  width: 100%;
+  padding: 4px;
+  background: $color-foreground;
+  border-top-left-radius: $border-radius-large;
+  border-top-right-radius: $border-radius-large;
+
+  @include flexbox();
+}
+
+.c-texty_input__container {
+  grid-area: input;
+
+  min-height: 38px;
+  padding: 8px 12px;
+
+  @include flexbox($align: center);
+}
+
+.c-wysiwyg_container__attachments {
+  grid-area: attachments;
+}
+
+.c-wysiwyg_container__actions {
+  grid-area: actions;
+
+  min-height: 40px;
+  padding: 0 4px 0 6px;
+
+  @include flexbox($align: center);
+}
