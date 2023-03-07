@@ -21,3 +21,8 @@
 @mixin flexCenter() {
   @include flexbox($align: center, $justify: center);
 }
+
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}

@@ -1,0 +1,51 @@
+.c-message_kit__background {
+  &:hover,
+  &:focus {
+    background-color: $color-hover;
+  }
+}
+
+.c-message_kit__gutter {
+  padding: 8px 20px;
+
+  @include flexbox($col-gap: 8px);
+
+  &__right {
+    margin-top: -4px;
+  }
+}
+
+// message
+.c-message_kit__avatar {
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.c-avatar {
+  @include size(36px);
+}
+
+.c-message__sender {
+  @include flexbox($col-gap: 7px);
+
+  &_button {
+    font-weight: 900;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+
+  &_timestamp {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &__label {
+      color: $color-text-secondary;
+      font-size: $font-size-small;
+    }
+  }
+}

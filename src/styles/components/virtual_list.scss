@@ -1,0 +1,11 @@
+@import './message.scss';
+
+.c-virtual_list {
+  height: 100%;
+  position: relative;
+
+  &__scroll_container {
+    height: 100%;
+    @include flexbox($direction: column, $justify: flex-end);
+  }
+}

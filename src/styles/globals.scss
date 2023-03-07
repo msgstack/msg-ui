@@ -3,3 +3,9 @@
 @tailwind utilities;
 
 @import './theme.scss';
+@import './helpers.scss';
+
+body {
+  color: $color-text;
+  font-size: $font-size-base;
+}
