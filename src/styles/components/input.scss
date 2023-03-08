@@ -13,6 +13,12 @@
   border-radius: $border-radius-large;
   box-shadow: 0 0 0 2px rgba(29, 28, 29, 0.13);
   border: 1px solid $border-color-base;
+  transition: border-color 0.16s, box-shadow 0.16s;
+
+  &:focus-within {
+    box-shadow: 0 1px 3px #00000014;
+    border-color: $border-color-focus;
+  }
 }
 
 .p-message_pane_input_inner_bottom {
@@ -54,11 +60,50 @@
 
 .c-texty_input__container {
   grid-area: input;
-
   min-height: 38px;
-  padding: 8px 12px;
 
   @include flexbox($align: center);
+}
+
+.c-texty_input {
+  flex: 1;
+  position: relative;
+
+  @include flexbox();
+}
+
+.ql-editor {
+  flex: 1;
+  padding: 8px 12px;
+
+  &.ql-blank {
+    ~ .ql-placeholder {
+      display: block;
+    }
+  }
+
+  &__input {
+    padding: 8px 12px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.ql-clipboard {
+  display: none;
+}
+
+.ql-placeholder {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 12px;
+  right: 12px;
+  bottom: 8px;
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .c-wysiwyg_container__attachments {
@@ -69,7 +114,27 @@
   grid-area: actions;
 
   min-height: 40px;
-  padding: 0 4px 0 6px;
+  padding: 4px 4px 4px 6px;
+  border-bottom-left-radius: $border-radius-large;
+  border-bottom-right-radius: $border-radius-large;
 
-  @include flexbox($align: center);
+  @include flexbox($align: center, $col-gap: 4px);
+}
+
+.c-wysiwyg_container__prefix {
+  min-width: 28px;
+}
+
+.c-wysiwyg_container__toolbar {
+  flex: 1;
+}
+
+.c-wysiwyg_container__suffix {
+  @include flexbox($justify: flex-end);
+}
+
+.c-wysiwyg_container__button {
+  &--send {
+    @include flexCenter();
+  }
 }
